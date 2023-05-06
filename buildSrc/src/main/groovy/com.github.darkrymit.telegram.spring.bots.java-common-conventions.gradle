@@ -1,0 +1,20 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.github.darkrymit.telegram.spring.bots'
+version = '1.0.0'
+sourceCompatibility = JavaVersion.VERSION_11
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.1'
+}
+
+tasks.named('test') {
+    // Use JUnit Platform for unit tests.
+    useJUnitPlatform()
+}

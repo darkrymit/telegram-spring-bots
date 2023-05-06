@@ -1,0 +1,7 @@
+plugins {
+    id "io.freefair.aggregate-javadoc" version "6.6.3"
+}
+
+repositories {
+    gradlePluginPortal()
+}

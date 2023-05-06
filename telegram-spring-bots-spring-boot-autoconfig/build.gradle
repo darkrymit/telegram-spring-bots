@@ -1,0 +1,11 @@
+plugins {
+    id 'com.github.darkrymit.telegram.spring.bots.java-library-conventions'
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'com.github.pengrad:java-telegram-bot-api:6.7.0'
+    implementation project(':telegram-spring-bots-core')
+    implementation project(':telegram-spring-bots-spel')
+    implementation project(':telegram-spring-bots-command')
+}

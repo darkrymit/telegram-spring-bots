@@ -1,0 +1,14 @@
+plugins {
+    id 'com.github.darkrymit.telegram.spring.bots.java-library-conventions'
+}
+
+dependencies {
+    implementation project(':telegram-spring-bots-core')
+    implementation 'com.github.pengrad:java-telegram-bot-api:6.7.0'
+    implementation 'org.springframework.boot:spring-boot-starter'
+    compileOnly 'org.projectlombok:lombok:1.18.26'
+    annotationProcessor 'org.projectlombok:lombok:1.18.26'
+    // https://mvnrepository.com/artifact/com.google.code.findbugs/jsr305
+    implementation 'com.google.code.findbugs:jsr305:3.0.2'
+
+}

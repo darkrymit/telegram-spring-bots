@@ -1,0 +1,43 @@
+plugins {
+
+    id 'com.github.darkrymit.telegram.spring.bots.java-common-conventions'
+
+    id 'java-library'
+
+    id 'maven-publish'
+
+    id 'org.springframework.boot' apply false
+
+}
+
+dependencies {
+    implementation platform(org.springframework.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES)
+}
+
+java {
+    withJavadocJar()
+    withSourcesJar()
+}
+
+bootJar {
+    enabled = false
+}
+
+jar {
+    enabled = true
+    archiveClassifier = ''
+}
+
+javadoc {
+    source = sourceSets.main.allJava
+    options.addStringOption('Xdoclint:none', '-quiet')
+    options.addBooleanOption('html5', true)
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
+}
